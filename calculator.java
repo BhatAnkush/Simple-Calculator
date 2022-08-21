@@ -1,16 +1,20 @@
-package calculator;
+//Written by:Ankush Ananth Bhat
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class calculator extends JFrame implements ActionListener {
      Container c = getContentPane();
     JLabel l1= new JLabel(" First Number");
+     //lable for taking input 1
     JLabel l2 = new JLabel("Second Number");
+     //lable for taking input 2
     JLabel result = new JLabel();
     JTextField t1 = new JTextField(20);
+     //text field for taking input
     JTextField t2= new JTextField(20);
+     //textfield for taking input
     JButton add = new JButton("add");
-    JButton subtract = new JButton("subtract");
+    JButton subtract = new JButton("subtract");//Buttons
     JButton multiply = new JButton("multiply");
     JButton divide = new JButton("divide");
     public calculator(){
@@ -32,7 +36,7 @@ public class calculator extends JFrame implements ActionListener {
         divide.addActionListener(this);
     }
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {//Action to be performed when a button is pressed
         Object source = e.getSource();
         if(source == add){
             String ans1 = t1.getText();
